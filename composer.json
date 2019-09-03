@@ -1,0 +1,32 @@
+{
+  "name": "nrel/flickrapi",
+  "type": "drupal-module",
+  "description": "The Flickr API module serves as a helper module for other Drupal Flickr modules.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.github.com/NREL/flickrapi",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/NREL/flickrapi/issues",
+    "source": "https://github.com/NREL/flickrapi"
+  },
+    "repositories": {
+        "assets" : {
+            "type": "composer",
+            "url": "https://asset-packagist.nrel.gov/nrel/drupal7/",
+            "options" : {
+                "ssl" : {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            }
+        },
+        "packagist.org": false,
+        "packages.drupal.org": false
+    },
+  "require": {
+    "samwilson/phpflickr": "^4.12",
+    "NREL/phpflickr": "dev-master",
+    "drupal/backport_composer": "1.1"
+  }
+}

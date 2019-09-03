@@ -1,0 +1,473 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "dc02bcd5e4ffd809d663c4cf898aea34",
+    "packages": [
+        {
+            "name": "NREL/phpflickr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NREL/phpflickr.git",
+                "reference": "7cdf3d7fa9e10bcc9a3482cd20feb75635b01c1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NREL/phpflickr/zipball/7cdf3d7fa9e10bcc9a3482cd20feb75635b01c1e",
+                "reference": "7cdf3d7fa9e10bcc9a3482cd20feb75635b01c1e",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "lusitanian/oauth": "^0.8",
+                "php": ">=5.6",
+                "psr/cache": "^1.0"
+            },
+            "require-dev": {
+                "mediawiki/minus-x": "^0.3",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "tedivm/stash": "^0.14"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NREL\\PhpFlickr\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "NREL\\PhpFlickr\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal7/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "A PHP wrapper for the Flickr API, including Oauth.",
+            "support": {
+                "source": "https://github.com/NREL/phpflickr/tree/master"
+            },
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            },
+            "time": "2019-09-03T16:39:26+00:00"
+        },
+        {
+            "name": "drupal/backport_composer",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/backport_composer.git",
+                "reference": "7.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/backport_composer-7.x-1.1.zip",
+                "reference": "7.x-1.1",
+                "shasum": "6d903ced6ea319f0261b6dabfaac28ba7c4d21ce",
+                "mirrors": [
+                    {
+                        "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "drupal/drupal": "~7.0"
+            },
+            "conflict": {
+                "drupal/composer_autoload": "*",
+                "drupal/composer_autoloader": "*",
+                "drupal/composer_manager": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.1",
+                    "datestamp": "1520710084",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal7/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Carver (markcarver)",
+                    "homepage": "https://www.drupal.org/u/markcarver",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Fabian Franz (Fabianx)",
+                    "homepage": "https://www.drupal.org/u/Fabianx",
+                    "role": "Co-Maintainer"
+                },
+                {
+                    "name": "Daniel Wehner (dawehner)",
+                    "homepage": "https://www.drupal.org/u/dawehner",
+                    "role": "Co-Maintainer"
+                },
+                {
+                    "name": "Pol Dellaiera (Pol)",
+                    "homepage": "https://www.drupal.org/u/Pol",
+                    "role": "Co-Maintainer"
+                }
+            ],
+            "description": "A very lightweight module that registers Composer's Autoloader in Drupal 7.",
+            "homepage": "https://www.drupal.org/project/backport_composer",
+            "support": {
+                "source": "https://git.drupalcode.org/project/backport_composer",
+                "issues": "http://drupal.org/project/issues/backport_composer"
+            },
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            }
+        },
+        {
+            "name": "drupal/drupal",
+            "version": "dev-7.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/drupal.git",
+                "reference": "15dec4d9746fac76a28542b58bd5abe2eb8462e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/drupal/drupal/dev-7.x/15dec4d9746fac76a28542b58bd5abe2eb8462e0.zip",
+                "reference": "15dec4d9746fac76a28542b58bd5abe2eb8462e0",
+                "mirrors": [
+                    {
+                        "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "type": "drupal-core",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x": "7.x-dev"
+                },
+                "drupal": {
+                    "version": "7.66+18-dev",
+                    "datestamp": "1557335588",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal7/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "David_Rothstein",
+                    "homepage": "https://www.drupal.org/user/124982"
+                },
+                {
+                    "name": "Dries",
+                    "homepage": "https://www.drupal.org/user/1"
+                },
+                {
+                    "name": "Drupal",
+                    "homepage": "https://www.drupal.org/user/3"
+                },
+                {
+                    "name": "Fabianx",
+                    "homepage": "https://www.drupal.org/user/693738"
+                },
+                {
+                    "name": "Gábor Hojtsy",
+                    "homepage": "https://www.drupal.org/user/4166"
+                },
+                {
+                    "name": "alexpott",
+                    "homepage": "https://www.drupal.org/user/157725"
+                },
+                {
+                    "name": "catch",
+                    "homepage": "https://www.drupal.org/user/35733"
+                },
+                {
+                    "name": "cilefen",
+                    "homepage": "https://www.drupal.org/user/1850070"
+                },
+                {
+                    "name": "drumm",
+                    "homepage": "https://www.drupal.org/user/3064"
+                },
+                {
+                    "name": "effulgentsia",
+                    "homepage": "https://www.drupal.org/user/78040"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "plach",
+                    "homepage": "https://www.drupal.org/user/183211"
+                },
+                {
+                    "name": "stefan.r",
+                    "homepage": "https://www.drupal.org/user/551886"
+                },
+                {
+                    "name": "webchick",
+                    "homepage": "https://www.drupal.org/user/24967"
+                },
+                {
+                    "name": "xjm",
+                    "homepage": "https://www.drupal.org/user/65776"
+                },
+                {
+                    "name": "yoroy",
+                    "homepage": "https://www.drupal.org/user/41502"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/drupal",
+            "support": {
+                "source": "https://git.drupalcode.org/project/drupal"
+            },
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            },
+            "time": "2019-05-10T16:49:22+00:00"
+        },
+        {
+            "name": "lusitanian/oauth",
+            "version": "v0.8.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lusitanian/PHPoAuthLib.git",
+                "reference": "fc11a53db4b66da555a6a11fce294f574a8374f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Lusitanian/PHPoAuthLib/zipball/fc11a53db4b66da555a6a11fce294f574a8374f9",
+                "reference": "fc11a53db4b66da555a6a11fce294f574a8374f9",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "predis/predis": "0.8.*@dev",
+                "squizlabs/php_codesniffer": "2.*",
+                "symfony/http-foundation": "~2.1"
+            },
+            "suggest": {
+                "ext-openssl": "Allows for usage of secure connections with the stream-based HTTP client.",
+                "predis/predis": "Allows using the Redis storage backend.",
+                "symfony/http-foundation": "Allows using the Symfony Session storage backend."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "OAuth": "src",
+                    "OAuth\\Unit": "tests"
+                }
+            },
+            "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal7/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Desberg",
+                    "email": "david@daviddesberg.com"
+                },
+                {
+                    "name": "Elliot Chance",
+                    "email": "elliotchance@gmail.com"
+                },
+                {
+                    "name": "Pieter Hordijk",
+                    "email": "info@pieterhordijk.com"
+                }
+            ],
+            "description": "PHP 5.3+ oAuth 1/2 Library",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "oauth",
+                "security"
+            ],
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            },
+            "time": "2018-02-14T22:37:14+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "78c5a01ddbf11cf731f1338a4f5aba23b14d5b47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/78c5a01ddbf11cf731f1338a4f5aba23b14d5b47",
+                "reference": "78c5a01ddbf11cf731f1338a4f5aba23b14d5b47",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal7/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            },
+            "time": "2016-10-13T14:48:10+00:00"
+        },
+        {
+            "name": "samwilson/phpflickr",
+            "version": "4.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samwilson/phpflickr.git",
+                "reference": "69ebbf09acd86b7d5888bfdc5b7b94e1549ace70"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samwilson/phpflickr/zipball/69ebbf09acd86b7d5888bfdc5b7b94e1549ace70",
+                "reference": "69ebbf09acd86b7d5888bfdc5b7b94e1549ace70",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://asset-packagist.nrel.gov/nrel/drupal7/dists/%package%/%version%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "lusitanian/oauth": "^0.8",
+                "php": ">=5.6",
+                "psr/cache": "^1.0"
+            },
+            "require-dev": {
+                "mediawiki/minus-x": "^0.3",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^3.0",
+                "tedivm/stash": "^0.14"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Samwilson\\PhpFlickr\\": "src/"
+                }
+            },
+            "notification-url": "https://asset-packagist.nrel.gov/nrel/drupal7/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "A PHP wrapper for the Flickr API, including Oauth.",
+            "transport-options": {
+                "ssl": {
+                    "verify_peer": false,
+                    "allow_self_signed": true
+                }
+            },
+            "time": "2019-08-22T04:26:24+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "nrel/phpflickr": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
