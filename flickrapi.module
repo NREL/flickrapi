@@ -9,6 +9,9 @@
  * develop a new Flickr-based module.
  */
 
+// use Samwilson\PhpFlickr;
+use Samwilson\PhpFlickr\PhpFlickr;
+
 /**
  * Implements hook_menu().
  */
@@ -51,25 +54,6 @@ function flickrapi_permission() {
 }
 
 /**
- * Implements hook_libraries_info().
- */
-function flickrapi_libraries_info() {
-  $libraries['phpFlickr'] = array(
-    'name' => 'phpFlickr',
-    'vendor url' => 'https://github.com/dan-coulter/phpflickr',
-    'download url' => 'https://github.com/dan-coulter/phpflickr',
-    'version' => 'No version',
-    'files' => array(
-      'php' => array(
-        'phpFlickr.php',
-      ),
-    ),
-  );
-
-  return $libraries;
-}
-
-/**
  * Implements hook_flush_caches().
  */
 function flickrapi_flush_caches() {
@@ -88,33 +72,29 @@ function flickrapi_flush_caches() {
 function flickrapi_phpFlickr($clear_cache = FALSE) {
   $flickr = FALSE;
 
-  $library = libraries_load('phpFlickr');
-  // Check if the library is loaded properly.
-  if (!empty($library) && $library['loaded'] !== FALSE) {
-    $api_key = variable_get('flickrapi_api_key', '');
-    $api_secret = variable_get('flickrapi_api_secret', '');
-    $cache = variable_get('flickrapi_cache', '');
-    $cache_dir = variable_get('flickrapi_cache_path', '');
+  $api_key = variable_get('flickrapi_api_key', '');
+  $api_secret = variable_get('flickrapi_api_secret', '');
+  $cache = variable_get('flickrapi_cache', '');
+  $cache_dir = variable_get('flickrapi_cache_path', '');
 
-    if (empty($api_key) || empty($api_secret)) {
-      drupal_set_message(t("Flickr API key not set"), 'error');
-      if (user_access('configure flickr api')) {
-        drupal_set_message(t('Please !configure', array('!configure' => l(t('configure the Flickr API settings'), 'admin/config/media/flickrapi'))));
-      }
+  if (empty($api_key) || empty($api_secret)) {
+    drupal_set_message(t("Flickr API key not set"), 'error');
+    if (user_access('configure flickr api')) {
+      drupal_set_message(t('Please !configure', array('!configure' => l(t('configure the Flickr API settings'), 'admin/config/media/flickrapi'))));
     }
-    $flickr = new phpFlickr($api_key, $api_secret);
+  }
+  // $flickr = new PhpFlickr($api_key, $api_secret);
+  $flickr = new \Samwilson\PhpFlickr\PhpFlickr($api_key, $api_secret);
+  // Override the default post function to enable OAuth.
+  $flickr->setCustomPost('_flickrapi_post');
 
-    // Override the default post function to enable OAuth.
-    $flickr->setCustomPost('_flickrapi_post');
-
-    // Enable caching.
-    if ($cache == TRUE) {
-      if ($clear_cache == TRUE) {
-        $flickr->enableCache('fs', $cache_dir, 0);
-      }
-      else {
-        $flickr->enableCache('fs', $cache_dir);
-      }
+  // Enable caching.
+  if ($cache == TRUE) {
+    if ($clear_cache == TRUE) {
+      $flickr->enableCache('fs', $cache_dir, 0);
+    }
+    else {
+      $flickr->enableCache('fs', $cache_dir);
     }
   }
 
